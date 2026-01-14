@@ -1,0 +1,90 @@
+/* 🌞 Default Light Theme */
+:root {
+    --bg-color: #f0f4f8;
+    --container-bg: #ffffff;
+    --text-color: #333;
+    --table-header-bg: #3b82f6;
+    --table-header-text: #ffffff;
+    --btn-bg: #3b82f6;
+    --btn-hover-bg: #2563eb;
+}
+
+/* 🌙 Dark Theme */
+body.dark {
+    --bg-color: #1e293b;
+    --container-bg: #334155;
+    --text-color: #f1f5f9;
+    --table-header-bg: #475569;
+    --table-header-text: #f1f5f9;
+    --btn-bg: #6366f1;
+    --btn-hover-bg: #4f46e5;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    transition: background 0.3s, color 0.3s;
+}
+
+/* Containers */
+.container {
+    max-width: 1000px;
+    margin: auto;
+    background: var(--container-bg);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transition: background 0.3s;
+}
+
+/* Buttons */
+button, .action-btn, .dark-toggle {
+    background: var(--btn-bg);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    padding: 10px 14px;
+    text-decoration: none;
+    display: inline-block;
+    transition: background 0.3s;
+}
+button:hover, .action-btn:hover, .dark-toggle:hover {
+    background: var(--btn-hover-bg);
+}
+
+.logout { background: #dc2626; }
+.logout:hover { background: #b91c1c; }
+
+/* Dark Mode Toggle Button */
+.dark-toggle {
+    position: fixed;
+    top: 15px;
+    right: 20px;
+    font-size: 14px;
+    z-index: 999;
+}
+
+/* Tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 15px;
+}
+th, td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+th {
+    background: var(--table-header-bg);
+    color: var(--table-header-text);
+}
+tr.expired { background: #fecaca; }
+tr.near-expiry { background: #fef3c7; }
+tr.low-stock { background: #fde68a; }
+
